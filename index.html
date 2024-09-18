@@ -162,6 +162,57 @@
         <h2>Projects</h2>
 
         <div class="project-entry">
+    <h3>YouTube Trending Data Pipeline and Analytics using AWS</h3>
+    <p><h4>Project Overview</h4></p>
+    <p>This project processes and transforms YouTube trending data, focusing on automating data ingestion, transformation, and visualization using AWS services. The objective is to combine YouTube data in JSON and CSV formats, transform it into a query-friendly format (Parquet), and enable automated querying and visualization through AWS Athena and Amazon QuickSight.</p>
+    
+    <button class="read-more-btn">Read More</button>
+    
+    <div class="project-details" style="display:none;">
+        <h4>Key Features:</h4>
+        <ul>
+            <li><strong>Data Ingestion:</strong> Uploaded the YouTube dataset from Kaggle into an S3 bucket with folders for JSON data and region-specific CSV files.</li>
+            <li><strong>Data Transformation:</strong> Combined data from CSV and JSON files using the common <code>id</code> and <code>category_id</code> columns, and converted them to Parquet format for efficient querying.</li>
+            <li><strong>Data Processing with AWS:</strong> 
+                <ul>
+                    <li><strong>AWS Lambda:</strong> Used Python scripts to convert JSON files to Parquet.</li>
+                    <li><strong>AWS Glue:</strong> Employed Glue's auto-generated Spark scripts to convert CSV files to Parquet.</li>
+                    <li><strong>AWS Athena:</strong> Used for SQL querying and joining the cleansed Parquet datasets.</li>
+                </ul>
+            </li>
+            <li><strong>Automated Workflow:</strong> Set up Lambda triggers to automatically execute the ETL pipeline when new data is added to S3.</li>
+            <li><strong>Visualization:</strong> Visualized the cleansed data using Amazon QuickSight, creating interactive dashboards and visual reports.</li>
+        </ul>
+
+        <h4>Outcomes and Benefits:</h4>
+        <ul>
+            <li><strong>Efficient Data Transformation:</strong> Parquet format provided faster queries and reduced storage costs, improving the overall performance of data processing and analysis.</li>
+            <li><strong>Automated ETL Pipeline:</strong> Lambda triggers automated the processing of new datasets, ensuring real-time availability for querying.</li>
+            <li><strong>Improved Data Access:</strong> AWS Athena allowed seamless querying of large datasets stored in S3 without needing an extensive ETL infrastructure.</li>
+            <li><strong>Actionable Insights:</strong> QuickSight dashboards provided real-time insights into YouTube trending data, facilitating better data-driven decision-making.</li>
+        </ul>
+
+        <h4>Technical Details:</h4>
+        <ul>
+            <li><strong>Dataset:</strong> YouTube trending dataset from Kaggle, stored as JSON and region-specific CSV files in an S3 bucket.</li>
+            <li><strong>Data Transformation:</strong> 
+                <ul>
+                    <li><strong>AWS Lambda:</strong> Used to convert JSON files to Parquet format.</li>
+                    <li><strong>AWS Glue:</strong> Employed Glue-generated Python Spark scripts to convert CSV files to Parquet.</li>
+                </ul>
+            </li>
+            <li><strong>Joining Process:</strong> The Parquet outputs from JSON and CSV conversions were joined in AWS Athena using common keys (<code>id</code>, <code>category_id</code>), with type casting to ensure compatibility.</li>
+            <li><strong>Visualization:</strong> Amazon QuickSight was used for building visual dashboards based on the processed data, enabling users to explore insights interactively.</li>
+        </ul>
+
+        <h4>Conclusion:</h4>
+        <p>This project successfully automated the process of ingesting, transforming, and visualizing YouTube trending data using AWS services. By converting large datasets into Parquet format, it enabled faster querying in Athena and real-time visualization in QuickSight. The combination of AWS Glue, Lambda, and S3 provided a scalable and efficient infrastructure, making it easy to manage and process future datasets. Future enhancements could involve integrating machine learning models to predict trends or further optimizing the data pipeline for more complex analytics.</p>
+    </div>
+    <hr>
+</div>
+
+
+        <div class="project-entry">
             <h3>IoT-based Health Monitoring for Elderly People</h3>
             <p><h4>Project Overview</h4></p>
             <p>Led a team of four to develop an innovative hardware model for comprehensive health monitoring of elderly individuals. The system utilized IoT technology to provide real-time health data and enhance remote care capabilities.</p>
